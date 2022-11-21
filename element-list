@@ -1,0 +1,13 @@
+net.pl3x.guithium.api
+net.pl3x.guithium.api.action
+net.pl3x.guithium.api.action.player
+net.pl3x.guithium.api.gui
+net.pl3x.guithium.api.gui.element
+net.pl3x.guithium.api.gui.texture
+net.pl3x.guithium.api.json
+net.pl3x.guithium.api.json.adapter
+net.pl3x.guithium.api.network
+net.pl3x.guithium.api.network.packet
+net.pl3x.guithium.api.player
+net.pl3x.guithium.api.scheduler
+net.pl3x.guithium.api.util
