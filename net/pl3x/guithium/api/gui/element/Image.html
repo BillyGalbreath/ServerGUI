@@ -87,6 +87,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Image</span>
 <span class="extends-implements">extends <a href="Rect.html" title="class in net.pl3x.guithium.api.gui.element">Rect</a></span></div>
+<div class="block">Represents an image.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -101,7 +102,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static class&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="Image.Builder.html" class="type-name-link" title="class in net.pl3x.guithium.api.gui.element">Image.Builder</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Builder for images.</div>
+</div>
 </div>
 <div class="inherited-list">
 <h2 id="nested-classes-inherited-from-class-net.pl3x.guithium.api.gui.element.AbstractElement">Nested classes/interfaces inherited from class&nbsp;net.pl3x.guithium.api.gui.element.<a href="AbstractElement.html" title="class in net.pl3x.guithium.api.gui.element">AbstractElement</a></h2>
@@ -142,9 +145,11 @@ loadScripts(document, 'script');</script>
  @Nullable <a href="../Point.html" title="class in net.pl3x.guithium.api.gui">Point</a>&nbsp;offset,
  @Nullable <a href="../Point.html" title="class in net.pl3x.guithium.api.gui">Point</a>&nbsp;size,
  @NotNull <a href="../texture/Texture.html" title="class in net.pl3x.guithium.api.gui.texture">Texture</a>&nbsp;texture,
- @Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;tint,
+ @Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;vertexColor,
  @Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&nbsp;tileModifier)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates a new image.</div>
+</div>
 </div>
 </section>
 </li>
@@ -161,17 +166,21 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static @NotNull <a href="Image.Builder.html" title="class in net.pl3x.guithium.api.gui.element">Image.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#builder(java.lang.String)" class="member-name-link">builder</a><wbr>(@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Create a new image builder.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static @NotNull <a href="Image.Builder.html" title="class in net.pl3x.guithium.api.gui.element">Image.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#builder(net.pl3x.guithium.api.Key)" class="member-name-link">builder</a><wbr>(@NotNull <a href="../../Key.html" title="class in net.pl3x.guithium.api">Key</a>&nbsp;key)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Create a new image builder.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static @NotNull <a href="Image.html" title="class in net.pl3x.guithium.api.gui.element">Image</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#fromJson(com.google.gson.JsonObject)" class="member-name-link">fromJson</a><wbr>(@NotNull com.google.gson.JsonObject&nbsp;json)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Create an element object from json representation.</div>
+<div class="block">Create a new image from Json.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPropertiesAsString()" class="member-name-link">getPropertiesAsString</a>()</code></div>
@@ -180,25 +189,37 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@NotNull <a href="../texture/Texture.html" title="class in net.pl3x.guithium.api.gui.texture">Texture</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTexture()" class="member-name-link">getTexture</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get the image's texture.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTileModifier()" class="member-name-link">getTileModifier</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get the image's tile modifier.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTint()" class="member-name-link">getTint</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVertexColor()" class="member-name-link">getVertexColor</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get the vertex color modifier.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTexture(net.pl3x.guithium.api.gui.texture.Texture)" class="member-name-link">setTexture</a><wbr>(@NotNull <a href="../texture/Texture.html" title="class in net.pl3x.guithium.api.gui.texture">Texture</a>&nbsp;texture)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Set the image's texture.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTileModifier(java.lang.Float)" class="member-name-link">setTileModifier</a><wbr>(@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&nbsp;tileModifier)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Set the image's tile modifier.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTint(java.lang.Integer)" class="member-name-link">setTint</a><wbr>(@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;tint)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVertexColor(java.lang.Integer)" class="member-name-link">setVertexColor</a><wbr>(@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;color)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Set the vertex color modifier.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@NotNull com.google.gson.JsonElement</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toJson()" class="member-name-link">toJson</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -266,9 +287,21 @@ loadScripts(document, 'script');</script>
  @NotNull
  @NotNull <a href="../texture/Texture.html" title="class in net.pl3x.guithium.api.gui.texture">Texture</a>&nbsp;texture,
  @Nullable
- @Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;tint,
+ @Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;vertexColor,
  @Nullable
  @Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&nbsp;tileModifier)</span></div>
+<div class="block">Creates a new image.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>key</code> - Unique identifier for element</dd>
+<dd><code>pos</code> - Position of element</dd>
+<dd><code>anchor</code> - Anchor for element</dd>
+<dd><code>offset</code> - Offset of element</dd>
+<dd><code>size</code> - Size of element</dd>
+<dd><code>texture</code> - Texture of image</dd>
+<dd><code>vertexColor</code> - Vertex color modifier</dd>
+<dd><code>tileModifier</code> - Tile modifier</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -284,6 +317,11 @@ loadScripts(document, 'script');</script>
 <h3>getTexture</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type">@NotNull <a href="../texture/Texture.html" title="class in net.pl3x.guithium.api.gui.texture">Texture</a></span>&nbsp;<span class="element-name">getTexture</span>()</div>
+<div class="block">Get the image's texture.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Image texture</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -291,20 +329,45 @@ loadScripts(document, 'script');</script>
 <h3>setTexture</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTexture</span><wbr><span class="parameters">(@NotNull
  @NotNull <a href="../texture/Texture.html" title="class in net.pl3x.guithium.api.gui.texture">Texture</a>&nbsp;texture)</span></div>
+<div class="block">Set the image's texture.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>texture</code> - Image texture</dd>
+</dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getTint()">
-<h3>getTint</h3>
+<section class="detail" id="getVertexColor()">
+<h3>getVertexColor</h3>
 <div class="member-signature"><span class="annotations">@Nullable
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type">@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getTint</span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getVertexColor</span>()</div>
+<div class="block">Get the vertex color modifier.
+ <p>
+ This is a color modifier used in mojang's `position_tex_color` fragment
+ shader to control how much of a texture's colors show through.
+ <p>
+ Eg, a modifier of `0xFF00FFFF` will remove all red from the texture.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Vertex color modifier</dd>
+</dl>
 </section>
 </li>
 <li>
-<section class="detail" id="setTint(java.lang.Integer)">
-<h3>setTint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTint</span><wbr><span class="parameters">(@Nullable
- @Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;tint)</span></div>
+<section class="detail" id="setVertexColor(java.lang.Integer)">
+<h3>setVertexColor</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVertexColor</span><wbr><span class="parameters">(@Nullable
+ @Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;color)</span></div>
+<div class="block">Set the vertex color modifier.
+ <p>
+ This is a color modifier used in mojang's `position_tex_color` fragment
+ shader to control how much of a texture's colors show through.
+ <p>
+ Eg, a modifier of `0xFF00FFFF` will remove all red from the texture.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>color</code> - Vertex color modifier</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -312,6 +375,16 @@ loadScripts(document, 'script');</script>
 <h3>getTileModifier</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type">@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a></span>&nbsp;<span class="element-name">getTileModifier</span>()</div>
+<div class="block">Get the image's tile modifier.
+ <p>
+ This is used to divide the UV into tiled segments on each axis.
+ <p>
+ Eg, a value of 32 is used on vanilla option screens with the dirt texture
+ in order to get the tiled effect. This does <em>not</em> mean it is tiled 32 times.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Tile modifier</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -319,6 +392,16 @@ loadScripts(document, 'script');</script>
 <h3>setTileModifier</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTileModifier</span><wbr><span class="parameters">(@Nullable
  @Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Float.html" title="class or interface in java.lang" class="external-link">Float</a>&nbsp;tileModifier)</span></div>
+<div class="block">Set the image's tile modifier.
+ <p>
+ This is used to divide the UV into tiled segments on each axis.
+ <p>
+ Eg, a value of 32 is used on vanilla option screens with the dirt texture
+ in order to get the tiled effect. This does <em>not</em> mean it is tiled 32 times.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>tileModifier</code> - Tile modifier</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -344,13 +427,12 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="modifiers">public static</span>&nbsp;<span class="return-type">@NotNull <a href="Image.html" title="class in net.pl3x.guithium.api.gui.element">Image</a></span>&nbsp;<span class="element-name">fromJson</span><wbr><span class="parameters">(@NotNull
  @NotNull com.google.gson.JsonObject&nbsp;json)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="Element.html#fromJson(com.google.gson.JsonObject)">Element</a></code></span></div>
-<div class="block">Create an element object from json representation.</div>
+<div class="block">Create a new image from Json.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>json</code> - Json representation</dd>
+<dd><code>json</code> - Json representation of a image</dd>
 <dt>Returns:</dt>
-<dd>A new element object, or null if invalid type</dd>
+<dd>A new image</dd>
 </dl>
 </section>
 </li>
@@ -409,6 +491,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="modifiers">public static</span>&nbsp;<span class="return-type">@NotNull <a href="Image.Builder.html" title="class in net.pl3x.guithium.api.gui.element">Image.Builder</a></span>&nbsp;<span class="element-name">builder</span><wbr><span class="parameters">(@NotNull
  @NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block">Create a new image builder.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>key</code> - Unique identifying key for the image</dd>
+<dt>Returns:</dt>
+<dd>New image builder</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -417,6 +506,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="modifiers">public static</span>&nbsp;<span class="return-type">@NotNull <a href="Image.Builder.html" title="class in net.pl3x.guithium.api.gui.element">Image.Builder</a></span>&nbsp;<span class="element-name">builder</span><wbr><span class="parameters">(@NotNull
  @NotNull <a href="../../Key.html" title="class in net.pl3x.guithium.api">Key</a>&nbsp;key)</span></div>
+<div class="block">Create a new image builder.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>key</code> - Unique identifying key for the image</dd>
+<dt>Returns:</dt>
+<dd>New image builder</dd>
+</dl>
 </section>
 </li>
 </ul>
