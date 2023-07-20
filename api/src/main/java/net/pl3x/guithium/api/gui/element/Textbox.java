@@ -3,14 +3,18 @@ package net.pl3x.guithium.api.gui.element;
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import java.util.Objects;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.serializer.gson.GsonComponentSerializer;
 import net.pl3x.guithium.api.Key;
+import net.pl3x.guithium.api.gui.Screen;
 import net.pl3x.guithium.api.gui.Vec2;
 import net.pl3x.guithium.api.json.JsonObjectWrapper;
+import net.pl3x.guithium.api.player.WrappedPlayer;
+import net.pl3x.guithium.api.util.QuadConsumer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Objects;
 
 /**
  * Represents an interactable textbox for user input.
@@ -24,6 +28,8 @@ public class Textbox extends Rect {
     private Boolean editable;
     private Integer textColor;
     private Integer textColorUneditable;
+    private OnChange onChange = (screen, textbox, player, value) -> {
+    };
 
     /**
      * Creates a new textbox.
@@ -240,6 +246,29 @@ public class Textbox extends Rect {
         this.textColorUneditable = color;
     }
 
+    /**
+     * Get the action to execute when the textbox is changed.
+     * <p>
+     * If null, no change action will be used.
+     *
+     * @return OnClick action
+     */
+    @Nullable
+    public OnChange onChange() {
+        return this.onChange;
+    }
+
+    /**
+     * Set the action to execute when the textbox is changed.
+     * <p>
+     * If null, no change action will be used.
+     *
+     * @param onChange OnChange action
+     */
+    public void onChange(@Nullable OnChange onChange) {
+        this.onChange = onChange;
+    }
+
     @Override
     @NotNull
     public JsonElement toJson() {
@@ -365,6 +394,7 @@ public class Textbox extends Rect {
         private Boolean editable;
         private Integer textColor;
         private Integer textColorUneditable;
+        private OnChange onChange;
 
         /**
          * Create a new textbox element builder.
@@ -593,6 +623,32 @@ public class Textbox extends Rect {
         }
 
         /**
+         * Get the action to execute when the textbox is changed.
+         * <p>
+         * If null, no change action will be used.
+         *
+         * @return OnChanged action
+         */
+        @Nullable
+        public OnChange onChange() {
+            return this.onChange;
+        }
+
+        /**
+         * Set the action to execute when the textbox is changed.
+         * <p>
+         * If null, no change action will be used.
+         *
+         * @param onChange OnChange action
+         * @return This builder
+         */
+        @NotNull
+        public Builder onChange(@Nullable Textbox.OnChange onChange) {
+            this.onChange = onChange;
+            return this;
+        }
+
+        /**
          * Build a new textbox element from the current properties in this builder.
          *
          * @return New textbox element
@@ -600,7 +656,23 @@ public class Textbox extends Rect {
         @Override
         @NotNull
         public Textbox build() {
-            return new Textbox(getKey(), getPos(), getAnchor(), getOffset(), getRotation(), getScale(), getSize(), getValue(), getSuggestion(), isBordered(), canLoseFocus(), getMaxLength(), isEditable(), getTextColor(), getTextColorUneditable());
+            final Textbox textbox = new Textbox(getKey(), getPos(), getAnchor(), getOffset(), getRotation(), getScale(), getSize(), getValue(), getSuggestion(), isBordered(), canLoseFocus(), getMaxLength(), isEditable(), getTextColor(), getTextColorUneditable());
+            textbox.onChange(this.onChange);
+            return textbox;
         }
     }
+
+    @FunctionalInterface
+    public interface OnChange extends QuadConsumer<Screen, Textbox, WrappedPlayer, String> {
+        /**
+         * Called when a textbox is changed.
+         *
+         * @param screen Active screen where slider was changed
+         * @param textbox Textbox that was changed
+         * @param player Player that changed the slider
+         * @param value  New value of the slider
+         */
+        void accept(@NotNull Screen screen, @NotNull Textbox textbox, @NotNull WrappedPlayer player, @NotNull String value);
+    }
+
 }

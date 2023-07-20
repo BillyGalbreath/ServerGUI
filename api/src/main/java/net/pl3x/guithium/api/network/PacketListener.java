@@ -8,6 +8,7 @@ import net.pl3x.guithium.api.network.packet.HelloPacket;
 import net.pl3x.guithium.api.network.packet.OpenScreenPacket;
 import net.pl3x.guithium.api.network.packet.RadioTogglePacket;
 import net.pl3x.guithium.api.network.packet.SliderChangePacket;
+import net.pl3x.guithium.api.network.packet.TextboxChangePacket;
 import net.pl3x.guithium.api.network.packet.TexturesPacket;
 import org.jetbrains.annotations.NotNull;
 
@@ -70,6 +71,13 @@ public interface PacketListener {
      * @param packet Slider change packet to handle
      */
     void handleSliderChange(@NotNull SliderChangePacket packet);
+
+    /**
+     * Handle Textbox change packet.
+     *
+     * @param packet Textbox change packet to handle
+     */
+    void handleTextboxChange(@NotNull TextboxChangePacket packet);
 
     /**
      * Handle texture preload packet.

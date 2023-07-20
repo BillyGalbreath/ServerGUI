@@ -1,9 +1,6 @@
 package net.pl3x.guithium.api.network;
 
 import com.google.common.io.ByteArrayDataInput;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Function;
 import net.pl3x.guithium.api.Guithium;
 import net.pl3x.guithium.api.Key;
 import net.pl3x.guithium.api.network.packet.ButtonClickPacket;
@@ -15,9 +12,14 @@ import net.pl3x.guithium.api.network.packet.OpenScreenPacket;
 import net.pl3x.guithium.api.network.packet.Packet;
 import net.pl3x.guithium.api.network.packet.RadioTogglePacket;
 import net.pl3x.guithium.api.network.packet.SliderChangePacket;
+import net.pl3x.guithium.api.network.packet.TextboxChangePacket;
 import net.pl3x.guithium.api.network.packet.TexturesPacket;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Function;
 
 /**
  * Represents a network handler.
@@ -43,6 +45,7 @@ public abstract class NetworkHandler {
         registerHandler(OpenScreenPacket.KEY, OpenScreenPacket::new);
         registerHandler(RadioTogglePacket.KEY, RadioTogglePacket::new);
         registerHandler(SliderChangePacket.KEY, SliderChangePacket::new);
+        registerHandler(TextboxChangePacket.KEY, TextboxChangePacket::new);
         registerHandler(TexturesPacket.KEY, TexturesPacket::new);
     }
 

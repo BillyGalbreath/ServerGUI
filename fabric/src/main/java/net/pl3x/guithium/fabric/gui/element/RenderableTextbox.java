@@ -8,6 +8,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.pl3x.guithium.api.gui.Vec2;
 import net.pl3x.guithium.api.gui.element.Textbox;
+import net.pl3x.guithium.api.network.packet.TextboxChangePacket;
+import net.pl3x.guithium.fabric.Guithium;
 import net.pl3x.guithium.fabric.gui.screen.RenderableScreen;
 import org.jetbrains.annotations.NotNull;
 
@@ -89,6 +91,12 @@ public class RenderableTextbox extends RenderableWidget {
         }
         if (getElement().getTextColorUneditable() != null) {
             editbox.setTextColorUneditable(getElement().getTextColorUneditable());
+        }
+        if (getElement().onChange() != null) {
+            editbox.setResponder(value -> {
+                Guithium.instance().getNetworkHandler().getConnection()
+                    .send(new TextboxChangePacket(getScreen().getScreen(), getElement(), value));
+            });
         }
     }
 }
